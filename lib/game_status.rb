@@ -29,6 +29,7 @@ def won?(board)
 
     if arr.all?{|el| el == "X"} || arr.all?{|el| el == "O"}
       return win_combination
+    end
   end
   return false
 end
