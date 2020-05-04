@@ -20,14 +20,15 @@ def full?
 end
 
 def won?(board)
-  WIN_COMBINATIONS.each do |win_combination|
-    arr = []
-    win_combination.each do |index|
-      arr << board[index]
-    end
-    if arr.all?{|obj| obj == "X"} || arr.all?{|obj| obj == "O"}
-      return true
-    end
+  for each win_combination in WIN_COMBINATIONS
+    win_index_1 = win_combination[0]
+    win_index_2 = win_combination[1]
+    win_index_3 = win_combination[2]
+
+    arr = [board[win_index_1], board[win_index_2], board[win_index_3]]
+
+    if arr.all?{|el| el == "X"} || arr.all?{|el| el == "O"}
+      return win_combination
   end
   return false
 end
