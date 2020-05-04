@@ -43,7 +43,7 @@ end
 def over?
   if full?(board)
     true
-  else 
+  else
     false
   end
 end
