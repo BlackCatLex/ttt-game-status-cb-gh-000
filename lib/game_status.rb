@@ -17,8 +17,7 @@ WIN_COMBINATIONS = [
 
 
 def full?(board)
-  board = board.flatten
-  board.all?{ |el| el=="X" || el=="O" }
+  board.flatten.all?{ |el| el=="X" || el=="O" }
 end
 
 def won?(board)
