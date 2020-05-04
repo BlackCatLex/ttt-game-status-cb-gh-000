@@ -42,7 +42,7 @@ end
 
 def over?
   if !won?(board)
-    false 
+    false
   end
   true
 end
