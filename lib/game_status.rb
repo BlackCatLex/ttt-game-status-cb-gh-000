@@ -19,7 +19,17 @@ WIN_COMBINATIONS = [
 def full?
 end
 
-def won?
+def won?(board)
+  WIN_COMBINATIONS.each do |win_combination|
+    arr = []
+    win_combination.each do |index|
+      arr << board[index]
+    end
+    if arr.all?{|obj| obj == "X"} || arr.all?{|obj| obj == "O"}
+      return true
+    end
+  end
+  return false
 end
 
 def draw?
